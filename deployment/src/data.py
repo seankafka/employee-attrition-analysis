@@ -5,7 +5,9 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-ROOT_DIR = Path(__file__).resolve().parents[2]
+# Handle both local and Streamlit cloud deployments
+_deployment_dir = Path(__file__).resolve().parent.parent
+ROOT_DIR = _deployment_dir.parent if (_deployment_dir.parent / "dataset").exists() else _deployment_dir
 DATA_PATH = ROOT_DIR / "dataset" / "HR_Attrition.csv"
 
 DROP_COLUMNS = [
