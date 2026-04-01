@@ -4,21 +4,20 @@
 
 ```
 .
-├── streamlit_app.py    - Entry point for Streamlit Cloud deployment
-├── requirements.txt    - Python dependencies for Streamlit Cloud
+├── streamlit_app.py                         - Entry point for Streamlit Cloud deployment
+├── requirements.txt                         - Python dependencies for Streamlit
 ├── deployment/
-│   ├── app.py    - Main Streamlit application
-│   ├── requirements.txt    - Python dependencies (local development)
+│   ├── app.py                               - Main Streamlit application
 │   └── src/
 │       ├── __init__.py
-│       ├── analysis.py    # Statistical analysis functions
-│       ├── charts.py    # Plotly visualization functions
-│       └── data.py    # Data loading and preprocessing
+│       ├── analysis.py                      - Statistical analysis functions
+│       ├── charts.py                        - Plotly visualization functions
+│       └── data.py                          - Data loading and preprocessing
 ├── project-notebooks/
-│   └── employee-attrition_analysis.ipynb # Notebook for data analysis
+│   └── employee-attrition_analysis.ipynb    - Notebook for data analysis
 ├── dataset/
-│   └── HR_Attrition.csv    - Employee attrition dataset
-├── README.md    - Project documentation
+│   └── HR_Attrition.csv                     - Employee attrition dataset
+├── README.md                                - Project documentation
 └── LICENSE
 ```
 
