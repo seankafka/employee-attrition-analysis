@@ -1,14 +1,40 @@
 from __future__ import annotations
 
 from pathlib import Path
+import os
 
 import numpy as np
 import pandas as pd
 
 # Handle both local and Streamlit cloud deployments
-_deployment_dir = Path(__file__).resolve().parent.parent
-ROOT_DIR = _deployment_dir.parent if (_deployment_dir.parent / "dataset").exists() else _deployment_dir
-DATA_PATH = ROOT_DIR / "dataset" / "HR_Attrition.csv"
+def get_data_path():
+    # Try multiple path resolution strategies
+    
+    # Strategy 1: From __file__ (works in local development)
+    try:
+        script_dir = Path(__file__).resolve().parent
+        deployment_dir = script_dir.parent
+        repo_dir = deployment_dir.parent
+        
+        if (repo_dir / "dataset" / "HR_Attrition.csv").exists():
+            return repo_dir / "dataset" / "HR_Attrition.csv"
+    except:
+        pass
+    
+    # Strategy 2: From environment/working directory (works in Streamlit cloud)
+    cwd = Path.cwd()
+    if (cwd / "dataset" / "HR_Attrition.csv").exists():
+        return cwd / "dataset" / "HR_Attrition.csv"
+    
+    # Strategy 3: Check if running from deployment directory
+    if (cwd / ".." / "dataset" / "HR_Attrition.csv").exists():
+        return (cwd / ".." / "dataset" / "HR_Attrition.csv").resolve()
+    
+    # Fallback: assume standard structure
+    return Path(__file__).resolve().parent.parent.parent / "dataset" / "HR_Attrition.csv"
+
+DATA_PATH = get_data_path()
+ROOT_DIR = DATA_PATH.parent.parent
 
 DROP_COLUMNS = [
     "Random Number",
@@ -34,6 +60,8 @@ CATEGORY_ORDERS = {
 
 def load_attrition_data(path: Path | str = DATA_PATH) -> pd.DataFrame:
     """Load the dataset and recreate the notebook's business-facing helper columns."""
+    if not Path(path).exists():
+        raise FileNotFoundError(f"Dataset not found at {path}. Looking in: {Path(path).resolve()}")
     df = pd.read_csv(path).copy()
     df = df.drop(columns=DROP_COLUMNS, errors="ignore")
 
