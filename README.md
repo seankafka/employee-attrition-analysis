@@ -21,8 +21,6 @@
 └── LICENSE
 ```
 
----
-
 ## Overview
 
 This project explores employee attrition using an end-to-end data analysis approach.
@@ -31,8 +29,6 @@ The main objective is to understand what factors are most associated with employ
 The analysis focuses not only on statistical relationships, but also on how employees experience their work on a day-to-day basis. This is important because attrition is rarely driven by a single factor, but rather by a combination of workload, compensation, and overall work experience.
 
 Dashboard Deployment: [Streamlit](https://employee-attrition-db.streamlit.app)
-
----
 
 ## Objectives
 
@@ -43,8 +39,6 @@ The goals of this project are:
 * Distinguish between statistically significant variables and practically meaningful ones
 * Translate analytical findings into clear business recommendations
 * Build a portfolio-ready analysis that is understandable for non-technical stakeholders
-
----
 
 ## Dataset
 This project uses dataset authored by Mark Bradbourne, accessed through [Data.World](https://data.world/markbradbourne/rwfd-real-world-fake-data-season-2/workspace/file?filename=HR_Attrition.csv)  
@@ -58,8 +52,6 @@ The dataset contains employee-level information related to:
 
 Target variable:
 * **Attrition** (Yes / No)
-
----
 
 ## Key Findings
 
@@ -89,8 +81,6 @@ Several consistent patterns emerge from the analysis:
 * Limited variation in performance ratings reduces its usefulness
 * It does not meaningfully differentiate between employees who leave and those who stay
 
----
-
 ## Key Insight
 
 Attrition in this dataset is not primarily driven by poor performance.
@@ -101,8 +91,6 @@ Instead, it is more closely related to a combination of:
 * Unsatisfying day-to-day work experience
 
 This shifts the focus from evaluation metrics to **work design and employee experience**.
-
----
 
 ## Business Recommendations
 
@@ -128,15 +116,12 @@ Based on the findings, several actions can be considered:
 * Identify roles and groups with higher attrition risk
 * Apply targeted retention strategies instead of one-size-fits-all policies
 
----
-
 ## Limitations
 
 * Statistical significance does not imply causation
 * Some variables (e.g., performance rating) have limited variability
 * Small group sizes in certain categories may affect interpretation
 
----
 
 ## Tools & Libraries
 
@@ -146,13 +131,9 @@ Based on the findings, several actions can be considered:
 * Statistics: SciPy
 * Dashboard: Streamlit
 
----
-
 ## Deployment Notes
 
 **Root-level files** (`streamlit_app.py`, `requirements.txt`) are required for Streamlit Cloud deployment. Streamlit Cloud expects these files at the repository root to properly configure the app and install dependencies. The main application code remains organized in the `deployment/` folder for clean project structure.
-
----
 
 ## Getting Started
 
@@ -188,5 +169,5 @@ The dashboard will open at `http://localhost:8501` and provide interactive filte
 ## Author
 This project was developed as part of a data learning journey, with a focus on building practical and business-relevant analytical skills.
 
-Sean Kafka Adhyaksa
+Sean Kafka Adhyaksa  
 [Github](https://github.com/seankafka) || [LinkedIn](https://www.linkedin.com/in/seankafka/)
