@@ -23,12 +23,6 @@
 
 ---
 
-## Deployment Notes
-
-**Root-level files** (`streamlit_app.py`, `requirements.txt`) are required for Streamlit Cloud deployment. Streamlit Cloud expects these files at the repository root to properly configure the app and install dependencies. The main application code remains organized in the `deployment/` folder for clean project structure.
-
----
-
 ## Overview
 
 This project explores employee attrition using an end-to-end data analysis approach.
@@ -151,6 +145,12 @@ Based on the findings, several actions can be considered:
 * Visualization: Matplotlib, Seaborn, Plotly
 * Statistics: SciPy
 * Dashboard: Streamlit
+
+---
+
+## Deployment Notes
+
+**Root-level files** (`streamlit_app.py`, `requirements.txt`) are required for Streamlit Cloud deployment. Streamlit Cloud expects these files at the repository root to properly configure the app and install dependencies. The main application code remains organized in the `deployment/` folder for clean project structure.
 
 ---
 
