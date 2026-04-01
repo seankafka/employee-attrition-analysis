@@ -4,21 +4,29 @@
 
 ```
 .
-├── streamlit_app.py                    # Entry point for Streamlit Cloud deployment
-├── deployment/                         # Streamlit app for interactive dashboard
-│   ├── app.py                          # Main Streamlit application
-│   ├── requirements.txt                # Python dependencies
-│   └── src/                            # Internal modules
+├── streamlit_app.py    - Entry point for Streamlit Cloud deployment
+├── requirements.txt    - Python dependencies for Streamlit Cloud
+├── deployment/
+│   ├── app.py    - Main Streamlit application
+│   ├── requirements.txt    - Python dependencies (local development)
+│   └── src/
 │       ├── __init__.py
-│       ├── analysis.py                 # Statistical analysis functions
-│       ├── charts.py                   # Plotly visualization functions
-│       └── data.py                     # Data loading and preprocessing
+│       ├── analysis.py    # Statistical analysis functions
+│       ├── charts.py    # Plotly visualization functions
+│       └── data.py    # Data loading and preprocessing
+├── project-notebooks/
+│   └── employee-attrition_analysis.ipynb # Notebook for data analysis
 ├── dataset/
-│   └── HR_Attrition.csv                # Employee attrition dataset
-├── employee-attrition_analysis.ipynb   # Exploratory analysis notebook
-├── README.md                           # Project documentation
+│   └── HR_Attrition.csv    - Employee attrition dataset
+├── README.md    - Project documentation
 └── LICENSE
 ```
+
+---
+
+## Deployment Notes
+
+**Root-level files** (`streamlit_app.py`, `requirements.txt`) are required for Streamlit Cloud deployment. Streamlit Cloud expects these files at the repository root to properly configure the app and install dependencies. The main application code remains organized in the `deployment/` folder for clean project structure.
 
 ---
 
