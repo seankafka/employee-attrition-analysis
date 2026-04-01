@@ -4,6 +4,7 @@
 
 ```
 .
+├── streamlit_app.py                    # Entry point for Streamlit Cloud deployment
 ├── deployment/                         # Streamlit app for interactive dashboard
 │   ├── app.py                          # Main Streamlit application
 │   ├── requirements.txt                # Python dependencies
