@@ -4,8 +4,6 @@
 
 ```
 .
-├── streamlit_app.py                         - Entry point for Streamlit Cloud deployment
-├── requirements.txt                         - Python dependencies for Streamlit
 ├── deployment/
 │   ├── app.py                               - Main Streamlit application
 │   └── src/
@@ -13,10 +11,15 @@
 │       ├── analysis.py                      - Statistical analysis functions
 │       ├── charts.py                        - Plotly visualization functions
 │       └── data.py                          - Data loading and preprocessing
-├── project-notebooks/
-│   └── employee-attrition_analysis.ipynb    - Notebook for data analysis
+│
 ├── dataset/
 │   └── HR_Attrition.csv                     - Employee attrition dataset
+│
+├── project-notebooks/
+│   └── employee-attrition_analysis.ipynb    - Notebook for data analysis
+│
+├── requirements.txt                         - Python dependencies for Streamlit
+├── streamlit_app.py                         - Entry point for Streamlit Cloud deployment
 ├── README.md                                - Project documentation
 └── LICENSE
 ```
@@ -30,6 +33,17 @@ The analysis focuses not only on statistical relationships, but also on how empl
 
 Dashboard Deployment: [Streamlit](https://employee-attrition-db.streamlit.app)
 
+## Key Insight
+
+Attrition in this dataset is not primarily driven by poor performance.
+Instead, it is more closely related to a combination of:
+
+* Unsustainable workload
+* Lack of perceived long-term value
+* Unsatisfying day-to-day work experience
+
+This shifts the focus from evaluation metrics to **work design and employee experience**.
+
 ## Objectives
 
 The goals of this project are:
@@ -41,8 +55,8 @@ The goals of this project are:
 * Build a portfolio-ready analysis that is understandable for non-technical stakeholders
 
 ## Dataset
-This project uses dataset authored by Mark Bradbourne, accessed through [Data.World](https://data.world/markbradbourne/rwfd-real-world-fake-data-season-2/workspace/file?filename=HR_Attrition.csv)  
-The dataset contains employee-level information related to:
+This project uses the dataset authored by Mark Bradbourne and published on [Data.World](https://data.world/markbradbourne/rwfd-real-world-fake-data-season-2/workspace/file?filename=HR_Attrition.csv).  
+The dataset contains **1470 employee records** and initially includes **37 columns** covering:
 
 * Demographics (e.g., Age, Marital Status)
 * Career and role (e.g., Job Role, Department, Job Level)
@@ -80,17 +94,6 @@ Several consistent patterns emerge from the analysis:
 
 * Limited variation in performance ratings reduces its usefulness
 * It does not meaningfully differentiate between employees who leave and those who stay
-
-## Key Insight
-
-Attrition in this dataset is not primarily driven by poor performance.
-Instead, it is more closely related to a combination of:
-
-* Unsustainable workload
-* Lack of perceived long-term value
-* Unsatisfying day-to-day work experience
-
-This shifts the focus from evaluation metrics to **work design and employee experience**.
 
 ## Business Recommendations
 
@@ -163,8 +166,6 @@ streamlit run deployment/app.py
 ```
 
 The dashboard will open at `http://localhost:8501` and provide interactive filters and visualizations of the analysis.
-
----
 
 ## Author
 This project was developed as part of a data learning journey, with a focus on building practical and business-relevant analytical skills.
