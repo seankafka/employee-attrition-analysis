@@ -1,48 +1,27 @@
+
 # Employee Attrition Analysis
 
 ## Repository Outline
 
 ```
 .
-├── deployment/
-│   ├── app.py                               - Main Streamlit application
-│   └── src/
-│       ├── __init__.py
-│       ├── analysis.py                      - Statistical analysis functions
-│       ├── charts.py                        - Plotly visualization functions
-│       └── data.py                          - Data loading and preprocessing
-│
 ├── dataset/
-│   └── HR_Attrition.csv                     - Employee attrition dataset
+│   └── HR_Attrition.csv                  - Employee attrition dataset
 │
-├── project-notebooks/
-│   └── employee-attrition_analysis.ipynb    - Notebook for data analysis
+├── employee-attrition_analysis.ipynb     - Project notebook covering employee attrition analysis
 │
-├── requirements.txt                         - Python dependencies for Streamlit
-├── streamlit_app.py                         - Entry point for Streamlit Cloud deployment
-├── README.md                                - Project documentation
-└── LICENSE
+├── README.md                             - Project documentation
+│
+└── LICENSE                               - License information for this repository
 ```
 
 ## Overview
 
-This project explores employee attrition using an end-to-end data analysis approach.
-The main objective is to understand what factors are most associated with employees leaving the company, and translate those findings into actionable business insights.
+This project explores employee attrition using an end-to-end data analysis approach. The main objective is to understand what factors are most associated with employees leaving the company, and translate those findings into actionable business insights.
 
 The analysis focuses not only on statistical relationships, but also on how employees experience their work on a day-to-day basis. This is important because attrition is rarely driven by a single factor, but rather by a combination of workload, compensation, and overall work experience.
 
-Dashboard Deployment: [Streamlit](https://employee-attrition-db.streamlit.app)
-
-## Key Insight
-
-Attrition in this dataset is not primarily driven by poor performance.
-Instead, it is more closely related to a combination of:
-
-* Unsustainable workload
-* Lack of perceived long-term value
-* Unsatisfying day-to-day work experience
-
-This shifts the focus from evaluation metrics to **work design and employee experience**.
+Dashboard Deployment: [Hugging Face Spaces](https://huggingface.co/spaces/seankafka/Employee-Attrition-Dashboard).
 
 ## Objectives
 
@@ -55,8 +34,9 @@ The goals of this project are:
 * Build a portfolio-ready analysis that is understandable for non-technical stakeholders
 
 ## Dataset
-This project uses the dataset authored by Mark Bradbourne and published on [Data.World](https://data.world/markbradbourne/rwfd-real-world-fake-data-season-2/workspace/file?filename=HR_Attrition.csv).  
-The dataset contains **1470 employee records** and initially includes **37 columns** covering:
+
+This project uses the dataset authored by Mark Bradbourne and published on [Data.World](https://data.world/markbradbourne/rwfd-real-world-fake-data-season-2/workspace/file?filename=HR_Attrition.csv).
+The dataset contains **1,470 employee records** and initially includes **37 columns** covering:
 
 * Demographics (e.g., Age, Marital Status)
 * Career and role (e.g., Job Role, Department, Job Level)
@@ -122,52 +102,20 @@ Based on the findings, several actions can be considered:
 ## Limitations
 
 * Statistical significance does not imply causation
-* Some variables (e.g., performance rating) have limited variability
+* Some variables, such as performance rating, have limited variability
 * Small group sizes in certain categories may affect interpretation
 
-
-## Tools & Libraries
+## Tools and Libraries
 
 * Language: Python
 * Data Handling: Pandas, NumPy
-* Visualization: Matplotlib, Seaborn, Plotly
+* Visualization: Plotly
 * Statistics: SciPy
 * Dashboard: Streamlit
-
-## Deployment Notes
-
-**Root-level files** (`streamlit_app.py`, `requirements.txt`) are required for Streamlit Cloud deployment. Streamlit Cloud expects these files at the repository root to properly configure the app and install dependencies. The main application code remains organized in the `deployment/` folder for clean project structure.
-
-## Getting Started
-
-### Prerequisites
-- Python 3.9+
-- pip
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/seankafka/employee-attrition-analysis.git
-   cd employee-attrition-analysis
-   ```
-
-2. Install dependencies:
-   ```bash
-   pip install -r deployment/requirements.txt
-   ```
-
-### Running the Dashboard
-
-To launch the interactive Streamlit dashboard:
-
-```bash
-streamlit run deployment/app.py
-```
-
-The dashboard will open at `http://localhost:8501` and provide interactive filters and visualizations of the analysis.
+* Deployment: Hugging Face Spaces (Docker)
 
 ## Author
+
 This project was developed as part of a data learning journey, with a focus on building practical and business-relevant analytical skills.
 
 Sean Kafka Adhyaksa  

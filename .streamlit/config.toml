@@ -1,5 +1,0 @@
-[client]
-toolbarMode = "minimal"
-
-[server]
-mainModule = "deployment/app"
