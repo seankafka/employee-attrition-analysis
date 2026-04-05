@@ -6,13 +6,13 @@
 ```
 .
 ├── dataset/
-│   └── HR_Attrition.csv                  - Employee attrition dataset
+│   └── HR_Attrition.csv                    - Employee attrition dataset
+├── project-notebook /
+│   └── employee-attrition_analysis.ipynb   - Project notebook covering employee attrition analysis
 │
-├── employee-attrition_analysis.ipynb     - Project notebook covering employee attrition analysis
-│
-├── README.md                             - Project documentation
-│
-└── LICENSE                               - License information for this repository
+├── LICENSE                                 - License information for this repository
+└── README.md                               - Project documentation
+
 ```
 
 ## Overview
